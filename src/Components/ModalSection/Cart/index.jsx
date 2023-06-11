@@ -1,6 +1,6 @@
 // Código do componente Cart
-import { Card, ImgProduct, SubTitleProduct } from "../../CardSection/styles";
-import { CartContainer, ImgCart } from "./styles";
+import lixeira from "../../../assets/lixeira.svg"
+import { CartContainer, ImgCart, SubtitleCart } from "./styles";
 
 export const Cart = ({ item, deleteToCart,index }) => {
     // console.log(index)
@@ -9,11 +9,10 @@ export const Cart = ({ item, deleteToCart,index }) => {
       <ImgCart>
         <img src={item.img} alt="imagem do produto" />
       </ImgCart>
-      <SubTitleProduct>
+      <SubtitleCart>
         <h1>{item.name}</h1>
-        <button onClick={() => deleteToCart(item.id)} type="button" >excluir</button>
-        {console.log(index)}
-      </SubTitleProduct>
+        <button onClick={() => deleteToCart(item.id)} type="button" ><img src={lixeira} alt="Excluir" /></button>
+      </SubtitleCart>
     </CartContainer>
     
   );

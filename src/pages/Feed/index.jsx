@@ -13,10 +13,13 @@ export const Feed = () => {
     const [cart, setCart] = useState([])
     
     
- 
+      
     const filteredProducts = products.filter(
-    product => product.name.toUpperCase().includes(search.toUpperCase())
+    product => product.name.toUpperCase().includes(search.toUpperCase()) 
+
       )
+     
+
 
 
     useEffect(() => {
@@ -39,8 +42,7 @@ export const Feed = () => {
       const VerificaItem = cart.some((item) => item.id === newProduct.id)
     
       if (VerificaItem) {
-        alert("Este item ja foi adicionado ao seu carrinho
-        ")
+        alert("Este item ja foi adicionado ao seu carrinho")
       } else {
         const newCart = [...cart, newProduct]
         setCart(newCart)
@@ -67,7 +69,7 @@ export const Feed = () => {
         product={product} 
         addToCart={addToCart}
         
-        />)
+        /> ) 
       }
        </ProductsList>
     </>

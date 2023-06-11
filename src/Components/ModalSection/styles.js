@@ -12,12 +12,13 @@ export const ModalContainer = styled.div`
     height:100vh;
     background:rgba(0,0,0,0.3);
 
-    overflow-x:auto;
+    /* overflow-x:auto; */
+    /* overflow-x: hidden; */
 `
 
 export const ModalBox = styled.div`
     top: 10vh;
-    position:relative;
+    position:fixed;
     display: flex;
     flex-direction:column;
     max-width:30vw;
@@ -25,9 +26,10 @@ export const ModalBox = styled.div`
     height: 50vh;
     padding:0rem;
     background:#ffffff;
+    overflow-x: auto; 
+ `
 
-    overflow-x:auto ;
-`
+
 export const HeaderModal = styled.div`
     position: relative;
     top:0;

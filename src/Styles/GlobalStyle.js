@@ -21,7 +21,11 @@ export default createGlobalStyle`
 
     body {
     overflow-x: hidden;
+      
   }
+
+  body::-webkit-scrollbar {
+  display: none;}
 
   body, input, button, textarea {
     font-family: 'Inter', sans-serif;
