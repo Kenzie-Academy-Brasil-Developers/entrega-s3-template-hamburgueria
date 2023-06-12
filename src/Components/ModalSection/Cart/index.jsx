@@ -1,9 +1,9 @@
-// Código do componente Cart
+
 import lixeira from "../../../assets/lixeira.svg"
 import { CartContainer, ImgCart, SubtitleCart } from "./styles";
 
 export const Cart = ({ item, deleteToCart,index }) => {
-    // console.log(index)
+
   return (
     <CartContainer>
       <ImgCart>

@@ -33,6 +33,46 @@ export const LogoHeader = styled.img`
 }
 `
 export const StyledCarrinho = styled.button`
-    border:none;    
+    border:none;   
+    position:relative ;
 
+    >p{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 15px;
+        border: 2px solid var(--Color-primary);
+        border-radius:40%;
+        background-color: var(--Color-primary);
+        color: white;
+        font-weight:900;
+        font-size:14px;
+    }
+
+`
+
+export const StyledForm = styled.form`
+    position: relative;
+
+
+    >input{
+        height: 5vh;
+        width: 15vw;
+        min-width:230px
+    }
+
+    >button{
+        background-color: var(--Color-primary) ;
+        position:absolute ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 4px;
+        top: 4px;
+        bottom:4px;
+        border: none;
+        padding-left:5px ;
+        padding-right:5px ;
+        border-radius:4px ;
+    }
 `

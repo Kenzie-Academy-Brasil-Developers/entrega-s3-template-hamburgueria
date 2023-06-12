@@ -4,7 +4,7 @@ import { Header } from "../../Components/Header"
 import { ProductsList } from "./styles"
 import { CardSection } from "../../Components/CardSection"
 import { ModalSection } from "../../Components/ModalSection"
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 
 export const Feed = () => {
@@ -12,17 +12,12 @@ export const Feed = () => {
     const [isLoading, setIsLoading] = useState (true)
     const [search,setSearch] = useState("")
     const [cart, setCart] = useState([])
-    
-    
       
     const filteredProducts = products.filter(
     product => product.name.toUpperCase().includes(search.toUpperCase()) 
 
       )
-     
-
-
-
+ 
     useEffect(() => {
       const getProducts = async () =>{
         try {

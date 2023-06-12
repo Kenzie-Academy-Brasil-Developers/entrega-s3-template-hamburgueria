@@ -60,7 +60,7 @@ export const ModalSection = ({ children, setIsOpen, setCart, cart,deleteToCart }
             {cart.map((item,index) => (
               <Cart key={index} item={item} deleteToCart={deleteToCart} index={index}  />
             ))}
-              {/* {children} */}
+              
           </ProductCart>
 
           <TotalCart>

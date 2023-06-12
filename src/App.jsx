@@ -1,15 +1,15 @@
-import { Header } from './Components/Header'
+import { Header } from "./Components/Header"
 import { Feed } from "./pages/Feed"
-import GlobalStyle from './Styles/GlobalStyle'
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import GlobalStyle from "./Styles/GlobalStyle"
+import { ToastContainer } from"react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // pra amanha 
 // ver como faz o modal 
 // tirar duvida sobre o carrinho 
 
 
-function App() {
+const App =()=> {
   return(
     <>
       <ToastContainer/>
