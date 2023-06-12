@@ -41,3 +41,32 @@ import styled from "styled-components";
             
         }
     `
+
+    export const ProductCart = styled.div`
+    
+    height: 70%;
+    overflow-x:auto ;
+    margin-bottom:5%
+    `
+
+    export const TotalCart = styled.div`
+        margin-left:2rem;
+        border-top:2px solid grey;
+        width: 90%;
+
+        >button{
+            width: 90%;
+            margin-top:1rem;
+            margin-left:2rem;
+            border:2px solid #E0E0E0;
+            border-radius:4px;
+            background-color:#E0E0E0 ;
+            
+        }
+        >div{
+            margin-top:1rem;
+            display:flex;
+            justify-content: space-around;
+
+        }
+    `

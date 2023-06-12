@@ -1,7 +1,8 @@
 import { Header } from './Components/Header'
 import { Feed } from "./pages/Feed"
 import GlobalStyle from './Styles/GlobalStyle'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // pra amanha 
 // ver como faz o modal 
@@ -11,6 +12,7 @@ import GlobalStyle from './Styles/GlobalStyle'
 function App() {
   return(
     <>
+      <ToastContainer/>
       <GlobalStyle/>
       <Feed/>
     </>

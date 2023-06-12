@@ -4,6 +4,7 @@ import { Header } from "../../Components/Header"
 import { ProductsList } from "./styles"
 import { CardSection } from "../../Components/CardSection"
 import { ModalSection } from "../../Components/ModalSection"
+import { toast } from 'react-toastify';
 
 
 export const Feed = () => {
@@ -38,14 +39,14 @@ export const Feed = () => {
     }, [])
 
     const addToCart = (newProduct) => {
-      //methodo some para ver se tem algo la dentro 
+      
       const VerificaItem = cart.some((item) => item.id === newProduct.id)
     
       if (VerificaItem) {
-        alert("Este item ja foi adicionado ao seu carrinho")
+        toast.info("Este item ja foi adicionado ao seu carrinho")
       } else {
         const newCart = [...cart, newProduct]
-        setCart(newCart)
+        toast.success( "item adicionado",setCart(newCart))
       }
     }
 
@@ -58,7 +59,7 @@ export const Feed = () => {
     
   return (
     <>
-     <Header cart={cart} setSearch={setSearch} deleteToCart={deleteToCart} />
+     <Header cart={cart} setCart={setCart} setSearch={setSearch}  deleteToCart={deleteToCart} />
      <ProductsList>
        {
         isLoading?
@@ -68,6 +69,7 @@ export const Feed = () => {
         key={product.id} 
         product={product} 
         addToCart={addToCart}
+       
         
         /> ) 
       }

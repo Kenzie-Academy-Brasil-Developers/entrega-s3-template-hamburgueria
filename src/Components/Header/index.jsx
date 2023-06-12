@@ -1,12 +1,12 @@
 import Logo from "../../assets/logotipo.svg"
 import carrinho from "../../assets/carrinho.svg"
-import { StyledHeader } from "./styles"
+import { StyledCarrinho, LogoHeader, StyledHeader } from "./styles"
 import { ModalSection } from "../ModalSection"
 import { useState } from "react"
 
 
 
-export const Header = ({setSearch,cart,deleteToCart}) => {
+export const Header = ({setSearch,cart,setCart,deleteToCart}) => {
     const [isOpen,setIsOpen] = useState(false)
     
     const handleSubmit = (event)=>{
@@ -15,10 +15,10 @@ export const Header = ({setSearch,cart,deleteToCart}) => {
 
     return(  
         <StyledHeader>
-            <img src={Logo} alt=" Icone Burguer Kenzie" />
+            <LogoHeader src={Logo} alt=" Icone Burguer Kenzie" />
 
-               <button onClick={() => setIsOpen(true)}> <img src={carrinho} alt="carrinho de compras" /></button>
-                {isOpen ? <ModalSection  cart={cart} setIsOpen={setIsOpen} deleteToCart={deleteToCart} >teste</ModalSection> :null} 
+               <StyledCarrinho onClick={() => setIsOpen(true)}> <img src={carrinho} alt="carrinho de compras" /></StyledCarrinho>
+                {isOpen ? <ModalSection  cart={cart} setCart={setCart} setIsOpen={setIsOpen} deleteToCart={deleteToCart} >teste</ModalSection> :null} 
              <form onSubmit={handleSubmit}>
                 <input
                  type="text"

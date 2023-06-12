@@ -9,8 +9,9 @@ export const ProductsList = styled.ul`
     gap:3rem;
     height: 100%;
     margin-left:1rem;
-    margin-top:30%;
+    margin-top:20vh;
     overflow-y:auto;
+
 
     @media(min-width: 800px){
        margin-left:10% ;
