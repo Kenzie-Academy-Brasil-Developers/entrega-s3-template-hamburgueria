@@ -1,21 +1,28 @@
 import styled from "styled-components";
 
     export const CartContainer = styled.div`
-    margin-top:3rem;
-    display:flex;
-    height:10rem;
+        margin-top:3rem;
+        display:flex;
+        height:10rem;
     
     `
 
     export const ImgCart = styled.div`  
-    display: flex;
-    align-items: flex-end;
+        display: flex;
+        align-items: flex-end;
 
-    >img{
-        background-color: #E0E0E0;
-        height: 100%;
-        margin-left:2rem;
+        >img{
+            background-color: #E0E0E0;
+            height: 100%;
+            margin-left:2rem;
     }
+    @media(max-width: 700px){  
+        >img{
+            width: 90%;
+            height: 90%;
+        }
+
+}
 
     `
 
@@ -40,6 +47,21 @@ import styled from "styled-components";
             margin-right:5%;
             
         }
+
+        @media(max-width: 701px){ 
+           
+            width: 60%;
+            h1{
+                
+             font-size:14px;
+            }
+            >button{
+                width: 1rem;
+                height: 1rem;
+                margin-right:2%;
+            }
+
+}
     `
 
     export const ProductCart = styled.div`

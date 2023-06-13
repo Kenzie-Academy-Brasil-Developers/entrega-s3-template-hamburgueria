@@ -11,7 +11,7 @@ export const ModalContainer = styled.div`
     width:100%;
     height:100vh;
     background:rgba(0,0,0,0.3);
-
+    z-index: 2;
     /* overflow-x:auto; */
     /* overflow-x: hidden; */
 `
@@ -21,7 +21,7 @@ export const ModalBox = styled.div`
     position:fixed;
     display: flex;
     flex-direction:column;
-    max-width:30vw;
+    min-width:300px;
     width:40vw;
     height: 60vh;
     padding:0rem;

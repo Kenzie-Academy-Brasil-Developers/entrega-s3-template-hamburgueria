@@ -53,7 +53,7 @@ export const StyledCarrinho = styled.button`
 
 export const StyledForm = styled.form`
     position: relative;
-
+    z-index: 1;
 
     >input{
         height: 5vh;

@@ -58,6 +58,9 @@
     `
 
     export const ImgProduct =styled.div`
+    display: flex;
+    justify-content:center;
+    align-itens:center;
         background: #F5F5F5;
         height: 15rem;
     >img{
