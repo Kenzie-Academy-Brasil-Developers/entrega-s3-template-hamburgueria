@@ -4,6 +4,7 @@ export const CardSection = ({product,addToCart}) => {
 
     return(
         <Card>
+            
             <ImgProduct>
                 <img src={product.img} alt="imagem do produto" />
             </ImgProduct>
@@ -13,6 +14,7 @@ export const CardSection = ({product,addToCart}) => {
                 <span> {`R$ ${product.price.toFixed(2)}`}</span>     
                 <button onClick={() => addToCart(product)} type="button" id={product.id}>adicionar</button>
             </SubTitleProduct>
+       
         </Card >
     )
 

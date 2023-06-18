@@ -12,8 +12,6 @@ export const ModalContainer = styled.div`
     height:100vh;
     background:rgba(0,0,0,0.3);
     z-index: 2;
-    /* overflow-x:auto; */
-    /* overflow-x: hidden; */
 `
 
 export const ModalBox = styled.div`
@@ -38,20 +36,43 @@ export const HeaderModal = styled.div`
     width: 100%;    
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:space-between;
     background-color:var(--Color-primary);
     color:white;
 
     >h1{
         font-size:1.8rem;
-        font-weight:700
+        font-weight:700;
+        padding-left:4%; ;
     }
 
     >button{
         border: 2px solid var(--Color-primary);
         background-color:var(--Color-primary) ;
         color: white;
+        font-weight:700;
+        margin-right:4%;
 
+    }
+
+`
+
+export const DivCondicional =styled.div`
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    >p{
+        align-text:center;
+        font-size:18px;
+        font-weight:700;
+        color:grey;
+    }
+    >img{
+        max-height: 15rem;
     }
 
 `

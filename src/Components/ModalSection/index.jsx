@@ -2,7 +2,8 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { Cart } from "./Cart";
 import { ProductCart, TotalCart } from "./Cart/styles";
-import { HeaderModal, ModalBox, ModalContainer } from "./styles";
+import { DivCondicional, HeaderModal, ModalBox, ModalContainer } from "./styles";
+import carrinhoVazio from "../../assets/bgCarrinhoVazio.png"
 
 export const ModalSection = ({ children, setIsOpen, setCart, cart,deleteToCart }) => {
 
@@ -47,32 +48,36 @@ export const ModalSection = ({ children, setIsOpen, setCart, cart,deleteToCart }
         },0)
       
 
-  return (
-      <ModalContainer role="dialog">
-        <ModalBox ref={modalRef}>
-
-          <HeaderModal>
-            <h1>carrinho de compras</h1>
-            <button ref={escRef} onClick={() => setIsOpen(false)}>X</button>
-          </HeaderModal>
-
-          <ProductCart> 
-            {cart.map((item,index) => (
-              <Cart key={index} item={item} deleteToCart={deleteToCart} index={index}  />
-            ))}
-              
-          </ProductCart>
-
-          <TotalCart>
-            <div>
-              <p>Total</p>
-              <p>{`R$${total.toFixed(2)}`}</p>
-            </div>
-              <button onClick={() => setCart(setCart=[])}>Remover todos</button>
-          </TotalCart>
-
-        </ModalBox>
-      </ModalContainer>
-  );
-};
-
+        return (
+          <ModalContainer role="dialog">
+            <ModalBox ref={modalRef}>
+              <HeaderModal>
+                <h1>carrinho de compras</h1>
+                <button ref={escRef} onClick={() => setIsOpen(false)}>X</button>
+              </HeaderModal>
+        
+              {cart.length === 0 ? (
+                <DivCondicional>
+                  <img src={carrinhoVazio} alt="" />
+                  <p>O seu carrinho ainda está vazio.</p>
+                </DivCondicional>
+              ) : (
+                <>
+                  <ProductCart> 
+                    {cart.map((item, index) => (
+                      <Cart key={index} item={item} deleteToCart={deleteToCart} index={index} />
+                    ))}
+                  </ProductCart>
+        
+                  <TotalCart>
+                    <div>
+                      <p>Total</p>
+                      <p>{`R$${total.toFixed(2)}`}</p>
+                    </div>
+                    <button onClick={() => setCart([])}>Remover todos</button>
+                  </TotalCart>
+                </>
+              )}
+            </ModalBox>
+          </ModalContainer>
+        )}

@@ -64,8 +64,6 @@ export const Feed = () => {
         key={product.id} 
         product={product} 
         addToCart={addToCart}
-       
-        
         /> ) 
       }
        </ProductsList>

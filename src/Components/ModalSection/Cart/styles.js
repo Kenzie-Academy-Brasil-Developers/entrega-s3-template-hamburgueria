@@ -65,10 +65,9 @@ import styled from "styled-components";
     `
 
     export const ProductCart = styled.div`
-    
     height: 70%;
-    overflow-x:auto ;
-    margin-bottom:5%
+    overflow-x:auto;
+    margin-bottom:5%;
     `
 
     export const TotalCart = styled.div`
@@ -89,6 +88,5 @@ import styled from "styled-components";
             margin-top:1rem;
             display:flex;
             justify-content: space-around;
-
         }
     `
